@@ -5,10 +5,10 @@ if (!defined("WHMCS"))
 
 function tawk_live_chat_ClientAreaFooterOutput($vars) {
 	$sql = "SELECT value FROM `tbladdonmodules` WHERE setting = 'clientareacode' AND module = 'tawk_live_chat';";
-	$sql = mysql_query($sql);
-	if(mysql_num_rows($sql) > 0)
+	$sql = mysqli_query($sql);
+	if(mysqli_num_rows($sql) > 0)
 	{
-		$data = mysql_fetch_assoc($sql);
+		$data = mysqli_fetch_assoc($sql);
 		$value = html_entity_decode($data["value"]);
 	} else {
 		$value = '';
