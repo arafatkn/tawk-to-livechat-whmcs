@@ -14,7 +14,7 @@ function tawk_live_chat_ClientAreaFooterOutput($vars) {
     }  catch (Exception $e) {
         echo "Something is wrong. {$e->getMessage()}";
     }
-    return "{$value}";
+    return $value;
 }
 
 add_hook("ClientAreaFooterOutput",1,"tawk_live_chat_ClientAreaFooterOutput");
