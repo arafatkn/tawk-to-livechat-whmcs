@@ -3,6 +3,8 @@
 if (!defined("WHMCS"))
 	die("This file cannot be accessed directly");
 
+use WHMCS\Database\Capsule;
+
 function tawk_live_chat_ClientAreaFooterOutput($vars) {
 	
     $value = "";
